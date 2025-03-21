@@ -6,7 +6,7 @@ export default function Main() {
           <h2>--&gt; Content goes here &lt;--</h2>
         </div>
       </div>
-      <div className="mainBackgroundBottom">
+      {/*  <div className="mainBackgroundBottom">
         <div className="rowMain d-flex">
           <div className="cardMain d-flex">
             <img src="/img/buy-comics-digital-comics.png" alt="" height="55" />
@@ -39,7 +39,7 @@ export default function Main() {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
