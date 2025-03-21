@@ -3,13 +3,17 @@ export default function Header() {
     <header>
       <nav className="navbar">
         <div className="navContainer d-flex">
-          <img src="/img/dc-logo.png" alt="dc logo" height="80" />
+          <a href="/">
+            <img src="/img/dc-logo.png" alt="dc logo" height="80" />
+          </a>
           <ul className="navMenu d-flex">
             <li>
               <a href="/">CHARACTERS</a>
             </li>
             <li>
-              <a href="/">COMICS</a>
+              <a href="/" className="active">
+                COMICS
+              </a>
             </li>
             <li>
               <a href="/">MOVIES</a>

@@ -10,23 +10,33 @@ export default function Main() {
         <div className="rowMain d-flex">
           <div className="cardMain d-flex">
             <img src="/img/buy-comics-digital-comics.png" alt="" height="55" />
-            <span>DIGITAL COMICS</span>
+            <span>
+              <a href="/">DIGITAL COMICS</a>
+            </span>
           </div>
           <div className="cardMain d-flex">
             <img src="/img/buy-comics-merchandise.png" alt="" height="55" />
-            <span>DC MERCHANDISE</span>
+            <span>
+              <a href="/">DC MERCHANDISE</a>
+            </span>
           </div>
           <div className="cardMain d-flex">
             <img src="/img/buy-comics-subscriptions.png" alt="" height="55" />
-            <span>SUBSCRIPTION</span>
+            <span>
+              <a href="/">SUBSCRIPTION</a>
+            </span>
           </div>
           <div className="cardMain d-flex">
             <img src="/img/buy-comics-shop-locator.png" alt="" height="55" />
-            <span>COMIC SHOP LOCATOR</span>
+            <span>
+              <a href="/">COMIC SHOP LOCATOR</a>
+            </span>
           </div>
           <div className="cardMain d-flex">
             <img src="/img/buy-dc-power-visa.svg" alt="" width="55" />
-            <span>DC POWER VISA</span>
+            <span>
+              <a href="/">DC POWER VISA</a>
+            </span>
           </div>
         </div>
       </div>
