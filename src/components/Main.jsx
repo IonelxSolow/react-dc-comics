@@ -1,7 +1,6 @@
 import Card from "./NewCard.jsx";
-import Comics from "./ComicsList.jsx";
 
-export default function Main() {
+export default function Main({ comics }) {
   return (
     <main>
       <div className="jumbotron"></div>
@@ -10,7 +9,7 @@ export default function Main() {
           <div className="rowCards d-flex">
             <button className="btnCurrentSeries">CURRENT SERIES</button>
 
-            {Comics.map((comic) => (
+            {comics.map((comic) => (
               <Card key={comic.id} content={comic.series} img={comic.thumb} />
             ))}
 
