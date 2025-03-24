@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Open Sans, sans-serif, Arial;
+  letter-spacing: -1px;
 }
 
 :root {
@@ -27,9 +28,6 @@ a {
   text-decoration: none;
 }
 
-/* #endregion COMMON */
-/* #region HEADER */
-
 .navbar,
 .mainContainer,
 .rowMain,
@@ -40,6 +38,12 @@ a {
   margin: 0 auto;
 }
 
+.col-2 {
+  width: calc(100% / 12 * 2);
+}
+
+/* #endregion COMMON */
+/* #region HEADER */
 .navContainer {
   justify-content: space-between;
   align-items: center;
@@ -61,7 +65,6 @@ a {
     }
 
     a {
-      letter-spacing: -1px;
       font-weight: 600;
       color: var(--dc-font-dark);
       &:hover {
@@ -73,6 +76,46 @@ a {
 /* #endregion HEADER */
 
 /* #region MAIN */
+.jumbotron {
+  height: 400px;
+  background-image: url(/img/jumbotron.jpg);
+}
+
+.btnCurrentSeries {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  height: 50px;
+  width: 245px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  color: var(--dc-font-light);
+  background-color: var(--dc-primary);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: rgb(24, 79, 231);
+  }
+}
+.btnLoadMore {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 36px;
+  width: 182px;
+  font-weight: 600;
+  color: var(--dc-font-light);
+  background-color: var(--dc-primary);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: rgb(24, 79, 231);
+  }
+}
 
 .mainBackgroundTop {
   color: var(--dc-font-light);
@@ -83,8 +126,28 @@ a {
   background-color: var(--dc-primary);
 }
 .mainContainer {
-  height: 130px;
   align-items: center;
+}
+
+.rowCards {
+  position: relative;
+  height: 584px;
+  flex-wrap: wrap;
+  margin: 2rem auto 4rem;
+
+  .card {
+    padding: 2rem 1rem;
+    img {
+      height: 185px;
+      width: 185px;
+      object-fit: cover;
+      object-position: top;
+    }
+    p {
+      font-size: 14px;
+      padding: 1rem 0;
+    }
+  }
 }
 .rowMain {
   height: 130px;
@@ -120,7 +183,6 @@ footer {
       max-width: 465px;
       flex-wrap: wrap;
       .card {
-        letter-spacing: -1px;
         font-weight: 300;
         min-width: 140px;
         h3 {
