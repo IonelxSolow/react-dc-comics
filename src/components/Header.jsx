@@ -1,4 +1,17 @@
 export default function Header() {
+  const linksArr = [
+    { id: 1, name: "CHARACTER", url: "#" },
+    { id: 2, name: "COMICS", url: "#" },
+    { id: 3, name: "MOVIES", url: "#" },
+    { id: 4, name: "TV", url: "#" },
+    { id: 5, name: "GAMES", url: "#" },
+    { id: 6, name: "COLLECTIBLES", url: "#" },
+    { id: 7, name: "VIDEOS", url: "#" },
+    { id: 8, name: "FANS", url: "#" },
+    { id: 9, name: "NEWS", url: "#" },
+    { id: 10, name: "SHOP", url: "#" },
+  ];
+
   return (
     <header>
       <nav className="navbar">
@@ -7,38 +20,11 @@ export default function Header() {
             <img src="/img/dc-logo.png" alt="dc logo" height="80" />
           </a>
           <ul className="navMenu d-flex">
-            <li>
-              <a href="/">CHARACTERS</a>
-            </li>
-            <li>
-              <a href="/" className="active">
-                COMICS
-              </a>
-            </li>
-            <li>
-              <a href="/">MOVIES</a>
-            </li>
-            <li>
-              <a href="/">TV</a>
-            </li>
-            <li>
-              <a href="/">GAMES</a>
-            </li>
-            <li>
-              <a href="/">COLLECTIBLES</a>
-            </li>
-            <li>
-              <a href="/">VIDEOS</a>
-            </li>
-            <li>
-              <a href="/">FANS</a>
-            </li>
-            <li>
-              <a href="/">NEWS</a>
-            </li>
-            <li>
-              <a href="/">SHOP</a>
-            </li>
+            {linksArr.map((link) => (
+              <li key={link.id}>
+                <a href={link.url}>{link.name}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
