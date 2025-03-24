@@ -1,104 +1,76 @@
 export default function Footer() {
+  const footerLinks = [
+    {
+      title: "DC COMICS",
+      links: [
+        { name: "Characters", url: "#" },
+        { name: "Comics", url: "#" },
+        { name: "Movies", url: "#" },
+        { name: "TV", url: "#" },
+        { name: "Games", url: "#" },
+        { name: "Videos", url: "#" },
+        { name: "News", url: "#" },
+      ],
+    },
+    {
+      title: "SHOP",
+      links: [
+        { name: "Shop DC", url: "#" },
+        { name: "Shop DC Collectibles", url: "#" },
+      ],
+    },
+    {
+      title: "DC",
+      links: [
+        { name: "Terms Of Use", url: "#" },
+        { name: "Privacy policy (New)", url: "#" },
+        { name: "Ad Choices", url: "#" },
+        { name: "Advertising", url: "#" },
+        { name: "Jobs", url: "#" },
+        { name: "Subscriptions", url: "#" },
+        { name: "Talent Workshops", url: "#" },
+        { name: "CPSC Certificates", url: "#" },
+        { name: "Ratings", url: "#" },
+        { name: "Shop Help", url: "#" },
+        { name: "Contact Us", url: "#" },
+      ],
+    },
+    {
+      title: "SITES",
+      links: [
+        { name: "DC", url: "#" },
+        { name: "MAD Magazine", url: "#" },
+        { name: "DC Kids", url: "#" },
+        { name: "DC Universe", url: "#" },
+        { name: "DC Power Visa", url: "#" },
+      ],
+    },
+  ];
+
+  const socialLinks = [
+    { img: "/img/footer-facebook.png", alt: "Facebook", url: "#" },
+    { img: "/img/footer-twitter.png", alt: "Twitter", url: "#" },
+    { img: "/img/footer-youtube.png", alt: "YouTube", url: "#" },
+    { img: "/img/footer-pinterest.png", alt: "Pinterest", url: "#" },
+    { img: "/img/footer-periscope.png", alt: "Periscope", url: "#" },
+  ];
+
   return (
     <footer>
       <div className="footerContainer d-flex">
         <div className="row d-flex">
-          <div className="card">
-            <h3>DC COMICS</h3>
-            <ul>
-              <li>
-                <a href="#">Characters</a>
-              </li>
-              <li>
-                <a href="#">Comics</a>
-              </li>
-              <li>
-                <a href="#">Movies</a>
-              </li>
-              <li>
-                <a href="#">TV</a>
-              </li>
-              <li>
-                <a href="#">Games</a>
-              </li>
-              <li>
-                <a href="#">Videos</a>
-              </li>
-              <li>
-                <a href="#">News</a>
-              </li>
-            </ul>
-
-            <h3>SHOP</h3>
-            <ul>
-              <li>
-                <a href="#">Shop DC</a>
-              </li>
-              <li>
-                <a href="#">Shop DC Collectibles</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="card">
-            <h3>DC</h3>
-            <ul>
-              <li>
-                <a href="#">Terms Of Use</a>
-              </li>
-              <li>
-                <a href="#">Privacy policy (New)</a>
-              </li>
-              <li>
-                <a href="#">Ad Choices</a>
-              </li>
-              <li>
-                <a href="#">Advertising</a>
-              </li>
-              <li>
-                <a href="#">Jobs</a>
-              </li>
-              <li>
-                <a href="#">Subscriptions</a>
-              </li>
-              <li>
-                <a href="#">Talent Workshops</a>
-              </li>
-              <li>
-                <a href="#">CPSC Certificates</a>
-              </li>
-              <li>
-                <a href="#">Ratings</a>
-              </li>
-              <li>
-                <a href="#">Shop Help</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="card">
-            <h3>SITES</h3>
-            <ul>
-              <li>
-                <a href="#">DC</a>
-              </li>
-              <li>
-                <a href="#">MAD Magazine</a>
-              </li>
-              <li>
-                <a href="#">DC Kids</a>
-              </li>
-              <li>
-                <a href="#">DC Universe</a>
-              </li>
-              <li>
-                <a href="#">DC Power Visa</a>
-              </li>
-            </ul>
-          </div>
+          {footerLinks.map((section, index) => (
+            <div className="card" key={index}>
+              <h3>{section.title}</h3>
+              <ul>
+                {section.links.map((link, idx) => (
+                  <li key={idx}>
+                    <a href={link.url}>{link.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
         <div className="dc-bg-logo"></div>
       </div>
@@ -109,31 +81,13 @@ export default function Footer() {
           <div className="followUs d-flex">
             <h4>FOLLOW US</h4>
             <ul className="iconBottom d-flex">
-              <li>
-                <a href="#">
-                  <img src="/img/footer-facebook.png" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="/img/footer-twitter.png" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="/img/footer-youtube.png" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="/img/footer-pinterest.png" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="/img/footer-periscope.png" alt="" />
-                </a>
-              </li>
+              {socialLinks.map((social, index) => (
+                <li key={index}>
+                  <a href={social.url}>
+                    <img src={social.img} alt={social.alt} />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
